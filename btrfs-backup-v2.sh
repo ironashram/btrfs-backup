@@ -19,5 +19,5 @@ mv /home/home-backup_new /home/home-backup
 btrfs subvolume delete /backup/home/home-backup
 mv /backup/home/home-backup_new /backup/home/home-backup
 
-find /backup/home/* -maxdepth 0 -mtime +7 -name "home-backup.*" | xargs sudo btrfs subvolume delete
-find /backup/rootfs/* -maxdepth 0 -mtime +7 -name "rootfs-backup.*" | xargs sudo btrfs subvolume delete 
+find /backup/home/* -maxdepth 0 -mtime +7 -name "home-backup.*" | xargs btrfs subvolume delete
+find /backup/rootfs/* -maxdepth 0 -mtime +7 -name "rootfs-backup.*" | xargs btrfs subvolume delete 
